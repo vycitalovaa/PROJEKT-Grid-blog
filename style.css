@@ -1,38 +1,147 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
-
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
 body {
-	margin: 0;
-	padding: 30px;
-	font-family:  'Alice', serif;
-	font-size: 18px;
-	line-height: 1.5;
+  margin: 0;
+  padding: 30px;
+  font-family: "Alice", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: var(--svetla);
+  color: var(--tmava);
 }
 
-h1, h2, h3 {
-	font-family: 'Kaushan Script', cursive;
-	font-weight: normal;
-	margin: 0;
+h1,
+h2,
+h3 {
+  font-family: "Kaushan Script", cursive;
+  font-weight: normal;
+  margin: 0;
+  color: var(--limetka);
+
 }
+h1 {
+  font-size: 80px;
+  margin-bottom: 80px;
+  
+}
+h2 {
+  font-size: 50px;
+  text-align: center;
+  }
+.meta {grid-row: 2;}
+figcaption {
+  color: var(--seda);
+}
+
 
 blockquote {
-	font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
+  margin: 0;
+  text-align: center;
 }
 
+.blog {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+  gap: 40px;
+}
+img {
+  width: 100%;
+}
+.tip {
+  background-color: var(--seda);
+  padding: 20px;
+  margin: 0;
+}
+.tip a {color:var(--cervena)}
+header,
+h2,
+h3 {
+  grid-column: 2 / 3;
+}
+header p {
+  color: var(--seda);
+  margin: 0;
+}
+
+p {
+  grid-column: 2 / 3;
+  margin: 0;
+}
+.tip-vlevo {
+  grid-column: 1 / 2;
+  text-align: right;
+
+  border-right: 2px solid var(--oranzova);
+}
+.tip-vpravo {
+  grid-column: 3 / -1;
+  text-align: left;
+  border-left: 2px solid var(--oranzova);
+}
+figure {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+blockquote {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--seda);
+  font-size: 42px;}
+
+  blockquote::before {
+	content: "";
+	display: block;
+	width: 80px;
+	height: 2px;
+	background-color: var(--limetka);
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	grid-column: 1 / -1;
+}
+blockquote::after {
+	content:"";
+	display: block;
+	width: 80px;
+	height: 2px;
+	background-color: var(--limetka);
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	grid-column: 1 / -1;
+}
+
+footer {
+  grid-column: 2 / 3;
+  text-align: center;
+  color: var(--seda);
+}
+footer a {
+  color: var(--seda);
+}
 /* --------------------------------------------------- */
 
 /* barvy */
 :root {
-	--svetla: #edf3f5;
-	--seda: #b2bec3;
-	--tmava: #636e72;
-	--oranzova: #ee5a24;
-	--cervena: #ea2027;
-	--zluta: #f79f1f;
-	--zelena: #a3cb38;
-	--limetka: #c4e538;
+  --svetla: #edf3f5;
+  --seda: #b2bec3;
+  --tmava: #636e72;
+  --oranzova: #ee5a24;
+  --cervena: #ea2027;
+  --zluta: #f79f1f;
+  --zelena: #a3cb38;
+  --limetka: #c4e538;
 }
 
 /*
@@ -65,4 +174,3 @@ blockquote {
 	- https://css-tricks.com/patterns-for-practical-css-custom-properties-use/
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
-
